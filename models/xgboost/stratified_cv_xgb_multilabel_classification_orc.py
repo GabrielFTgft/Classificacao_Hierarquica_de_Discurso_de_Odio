@@ -44,6 +44,6 @@ for train_index, test_index in mskf.split(X, y):
     y_pred = orc_model.predict(X_test)
     accuracy = orc_model.score(X_test, y_test)
     accuracyList.append(accuracy)
-    print(classification_report(y_test, y_pred, zero_division=0))
+    print(classification_report(y_test, y_pred))
 
 print("Media das acuracias:", np.mean(accuracyList))
